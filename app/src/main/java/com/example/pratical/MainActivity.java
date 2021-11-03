@@ -1,16 +1,15 @@
 package com.example.pratical;
 
-import static android.app.PendingIntent.getActivity;
+/**
+ *  Radio Button in Textbox view
+ */
 
 import androidx.appcompat.app.AppCompatActivity;
-
-
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,16 +17,21 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Button click = findViewById(R.id.click);
-
-        click.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Hello World", Toast.LENGTH_SHORT).show();
-            }
-
-        });
-
     }
-}
+
+    public void onRadioChecked(View view) {
+            boolean checked = ((RadioButton) view).isChecked();
+
+            // Check which radio button was clicked
+            switch(view.getId()) {
+                case R.id.Male:
+                    if (checked)
+                        Toast.makeText(MainActivity.this, "M", Toast.LENGTH_SHORT).show();
+                        break;
+                case R.id.Female:
+                    if (checked)
+                        Toast.makeText(MainActivity.this, "F", Toast.LENGTH_SHORT).show();
+                        break;
+            }
+        }
+    }
