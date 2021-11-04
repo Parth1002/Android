@@ -6,30 +6,41 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="182dp"
-        android:layout_height="121dp"
-        android:orientation="vertical"
+
+    <EditText
+        android:id="@+id/txtnotice"
+        android:layout_width="404dp"
+        android:layout_height="326dp"
+        android:layout_marginBottom="32dp"
+        android:ems="10"
+        android:hint="Please Enter The Notice"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/btnclick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnclick"
+        android:layout_width="268dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="136dp"
+        android:text="Click"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="416dp"
+        android:layout_height="142dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtnotice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <RadioButton
-            android:id="@+id/Male"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onRadioChecked"
-            android:text="Male" />
-
-        <RadioButton
-            android:id="@+id/Female"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onRadioChecked"
-            android:text="Female" />
-    </RadioGroup>
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.068"
+        app:srcCompat="@drawable/download" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
