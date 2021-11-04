@@ -5,7 +5,6 @@ package com.example.pratical;
  */
 
 
-
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -29,12 +28,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Employee emp = new Employee(txtNotice.getText().toString());
-                dao.add(emp).addOnSuccessListener(suc->{
-                    Toast.makeText(MainActivity.this, "Insert Database", Toast.LENGTH_SHORT).show();
-                }).addOnFailureListener(er->{
-                    Toast.makeText(MainActivity.this, ""+er.getMessage(), Toast.LENGTH_SHORT).show();
-                });
-            }
+
+                    dao.add(emp).addOnSuccessListener(suc -> {
+                        Toast.makeText(MainActivity.this, "Insert Database", Toast.LENGTH_SHORT).show();
+                    }).addOnFailureListener(er -> {
+                        Toast.makeText(MainActivity.this, "" + er.getMessage(), Toast.LENGTH_SHORT).show();
+                    });
+                }
         });
     }
 }
