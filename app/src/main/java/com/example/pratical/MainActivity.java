@@ -1,28 +1,53 @@
 package com.example.pratical;
 
 /**
- *
+ * LinearLayout And CheckBox
  */
-
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.TextView;
+import android.widget.Toast;
+
 
 public class MainActivity extends AppCompatActivity {
 
-    ListView listView;
+    CheckBox CKGOOGLE;
+    CheckBox CKYAHOO;
+    CheckBox CKBING;
+    Button Button;
+    TextView TextView;
 
-    String Arr[]={"Jay Goga","Jay Umiya Maa","Surekha","Parth"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        listView = findViewById(R.id.listview);
 
-        ArrayAdapter ad = new ArrayAdapter(this, android.R.layout.simple_list_item_1,Arr);
-        listView.setAdapter(ad);
+        CKGOOGLE=findViewById(R.id.CKGOOGLE);
+        CKYAHOO=findViewById(R.id.CKYAHOO);
+        CKBING=findViewById(R.id.CKBING);
+        Button=findViewById(R.id.button);
+        TextView=findViewById(R.id.textView2);
+
+        Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Toast.makeText(MainActivity.this, "Hello", Toast.LENGTH_SHORT).show();
+                if(CKGOOGLE.isChecked()){
+                    TextView.setText("YOUR SELECTED GOOGLE");
+                }
+                if(CKYAHOO.isChecked()) {
+                    TextView.setText("YOUR SELECTED YAHOO");
+                }
+                if(CKBING.isChecked()){
+                    TextView.setText("YOUR SELECTED BING");
+                }
+            }
+        });
 
     }
 }
