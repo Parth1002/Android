@@ -5,12 +5,16 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="testRunner" value="GRADLE" />
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../../Program Folder/Gradle/gradle-7.4" />
+        <option name="gradleJvm" value="Android Studio java home" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/app/lib" />
+            <option value="$PROJECT_DIR$/lib" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

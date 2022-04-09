@@ -8,3 +8,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Pratical"
 include ':app'
+include ':lib'
+include ':app:lib'
