@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,31 +7,18 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btnClick"
-        android:layout_width="204dp"
-        android:layout_height="53dp"
-        android:layout_marginBottom="336dp"
-        android:background="@drawable/custom_button"
-        android:text="Button"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
 
-    <EditText
-        android:id="@+id/TextUrl"
-        android:layout_width="350dp"
-        android:layout_height="71dp"
-        android:ems="10"
-        android:hint="Enter URL"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/btnClick"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.621"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.621" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/the_java_tutorials_are_practical_guides_for_programmers_who_want_to_use_the_java_programming_language_to_create_applications_they_include_hundreds_of_complete_working_examples_and_dozens_of_lessons_groups_of_related_lessons_are_organized_into_quot_trails_quot_n_trails_covering_the_basics_n_these_trails_are_available_in_book_form_as_the_java_tutorial_sixth_edition_to_buy_this_book_refer_to_the_box_to_the_right_n_getting_started_an_introduction_to_java_technology_and_lessons_on_installing_java_development_software_and_using_it_to_create_a_simple_program_n_learning_the_java_language_lessons_describing_the_essential_concepts_and_features_of_the_java_programming_language_n_essential_java_classes_lessons_on_exceptions_basic_input_output_concurrency_regular_expressions_and_the_platform_environment_n_collections_lessons_on_using_and_extending_the_java_collections_framework_n_date_time_apis_how_to_use_the_java_time_pages_to_write_date_and_time_code_n_deployment_how_to_package_applications_and_applets_using_jar_files_and_deploy_them_using_java_web_start_and_java_plug_in_n_preparation_for_java_programming_language_certification_list_of_available_training_and_tutorial_resources_n_creating_graphical_user_interfaces_n_creating_a_gui_with_swing_a_comprehensive_introduction_to_gui_creation_on_the_java_platform_n_creating_a_javafx_gui_a_collection_of_javafx_tutorials_n_specialized_trails_and_lessons_n_these_trails_and_lessons_are_only_available_as_web_pages_n_n_custom_networking_an_introduction_to_the_java_platforms_powerful_networking_features_n_the_extension_mechanism_how_to_make_custom_apis_available_to_all_applications_running_on_the_java_platform_n_full_screen_exclusive_mode_api_how_to_write_applications_that_more_fully_utilize_the_user_s_graphics_hardware_n_generics_an_enhancement_to_the_type_system_that_supports_operations_on_objects_of_various_types_while_providing_compile_time_type_safety_note_that_this_lesson_is_for_advanced_users_the_java_language_trail_contains_a_generics_lesson_that_is_suitable_for_beginners_n_internationalization_an_introduction_to_designing_software_so_that_it_can_be_easily_adapted_localized_to_various_languages_and_regions_n_javabeans_the_java_platform_s_component_technology_n_jaxb_introduces_the_java_architecture_for_xml_binding_jaxb_technology_n_jaxp_introduces_the_java_api_for_xml_processing_jaxp_technology_n_jdbc_database_access_introduces_an_api_for_connectivity_between_the_java_applications_and_a_wide_range_of_databases_and_data_sources_n_jmx_java_management_extensions_provides_a_standard_way_of_managing_resources_such_as_applications_devices_and_services_n_jndi_java_naming_and_directory_interface_enables_accessing_the_naming_and_directory_service_such_as_dns_and_ldap_n_reflection_an_api_that_represents_quot_reflects_quot_the_classes_interfaces_and_objects_in_the_current_java_virtual_machine_n_rmi_the_remote_method_invocation_api_allows_an_object_to_invoke_methods_of_an_object_running_on_another_java_virtual_machine_n_security_java_platform_features_that_help_protect_applications_from_malicious_software_n_sockets_direct_protocol_how_to_enable_the_sockets_direct_protocol_to_take_advantage_of_infiniband_n_sound_an_api_for_playing_sound_data_from_applications_n_2d_graphics_how_to_display_and_print_2d_graphics_in_applications"
+            android:textSize="24sp" />
+    </LinearLayout>
+</ScrollView>
