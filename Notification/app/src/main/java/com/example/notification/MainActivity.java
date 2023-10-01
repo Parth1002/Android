@@ -1,18 +1,18 @@
-package com.example.parth.notification;
+package com.example.notification;
 
 import android.app.Notification;
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.support.v4.content.res.ResourcesCompat;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import androidx.core.content.res.ResourcesCompat;
 
 public class MainActivity extends AppCompatActivity {
-private  static  final String CHANNEL_ID = "My Channel";
-
+    private  static  final String CHANNEL_ID = "My Channel";
     private  static  final int NOTIFICATION_ID = 100;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,15 +28,16 @@ private  static  final String CHANNEL_ID = "My Channel";
         NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         Notification notification;
 
-        if(android.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.0){
-             notification = new Notification.Builder(this)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            notification = new Notification.Builder(this)
                     .setLargeIcon(largeIcon)
                     .setSmallIcon(R.drawable.new_icon)
                     .setContentText("New Message")
                     .setSubText("New Message From Ram")
                     .setChannelId(CHANNEL_ID)
                     .build();
-             nm.createNotificationChannel(new NotificationChennel(CHANNEL_ID,"New Channel",NotificationManager.IMPORTANCE_HIGH));
+
+            nm.createNotificationChannel(new NotificationChannel(CHANNEL_ID,"New Channel",NotificationManager.IMPORTANCE_HIGH));
         }else{
             notification = new Notification.Builder(this)
                     .setLargeIcon(largeIcon)
